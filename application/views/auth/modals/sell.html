@@ -1,0 +1,101 @@
+<div id="sell-modal" class="modal fade">
+    <div class="modal-dialog">
+        <form id="sell-form" class="default-form" action="http://booksquare.in/sell/placeorder/" method='POST'>
+            <input type='hidden' name='csrfmiddlewaretoken' value='IQohhX1sNb4MIBwkfQBYrnmCAVzywysm' />
+            <div id="steps">
+                <h3>Select Books</h3>
+                <section>
+                    <table id="sellbookstable">
+                        <thead>
+                            <tr>
+                                <th>BookName</th>
+                                <th>Condition</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="search-input">
+                                            <input class="sellBookautoComplete currentsellBook" type="text" placeholder="Choose your book" onfocus="this.placeholder=''" onblur="this.placeholder='Choose your book'" name="sellBooksId" state="0">
+                                            <input class = "hiddensellBookautoComplete" type="text" name="hiddensellBooksId">  
+                                        </span>
+                                </td>
+                                <td>
+                                    <select disabled class="select-field sellbook-condition" name="sellBookCondition">
+                                        <option value="1">Excellent</option>
+                                        <option value="2">Good</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select disabled class="select-field sellbook-quantity" name="sellBookQuantity">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </td>
+                                <td><span class="book-selling-price"></span><span class="quant"></span></td>
+                                <td>
+                                    <a class="sellbook-remove-button"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div align="right"><a id="add-another-book" class="not-active"><i class="fa fa-cart-plus"></i> Add another book</a></div>
+                </section>
+                <h3>Enter Details</h3>
+                <section>
+                    <label>Select Drop Point</label>
+                    <span class="pickup-select">
+                            <select class="select-field mypickuppoint" name="PickUpPoint" id="pickup-point">
+                                <option>Select</option>    
+                                
+                                    <option>Coding Blocks, Kohat Enclave</option>
+                                
+                                    <option>NSIT McCan</option>
+                                
+                                    <option>NSIT BH-2</option>
+                                
+                                    <option>NSIT BH-3</option>
+                                
+                                    <option>MAIT CSE Block</option>
+                                
+                                    <option>DTU Canteen</option>
+                                
+                                    <option>BVP Canteen</option>
+                                
+                            </select>
+                        </span>
+                    <label>Phone Number</label>
+                    <div class="pickup-div">
+                        <span class="pickup-select">
+                                    <input class="input-field phone-number" type="text" name="phone_number" value="+91">
+                                </span>
+                    </div>
+                </section>
+                <h3>Review Order</h3>
+                <section class="sellorder-details">
+                    <h4 id="main-pickup-point"></h4>
+                    <table id="sellorder-table">
+                        <thead>
+                            <tr>
+                                <th>Book Description</th>
+                                <th>Condition</th>
+                                <th>Quantity</th>
+                                <th>Unit Price</th>
+                                <th>Sub Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <br>
+                        <tbody></tbody>
+                    </table>
+                </section>
+            </div>
+        </form>
+    </div>
+</div>

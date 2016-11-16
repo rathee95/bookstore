@@ -1,0 +1,22 @@
+<div id="signup-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="title">Many have already used BookSquare to get their books</div>
+        <div class="subtitle">Signup to start buying from us</div>
+        <div class="content-div">
+            <div class="form-card">
+                <form action="/auth/signup" method="post" id="signup-form">
+                    <input type='hidden' name='csrfmiddlewaretoken' value='IQohhX1sNb4MIBwkfQBYrnmCAVzywysm' />
+                    <div class="card-content">
+                        <input class="form-field" id="id_first_name" maxlength="30" name="name" placeholder="First Name" type="text" />
+                        <input class="form-field" id="id_email" maxlength="254" name="email" placeholder="Email" type="email" />
+                        <input class="form-field" id="id_phone_number" name="phone" placeholder="Phone Number" type="text" value="+91" />
+                        <input class="form-field" id="id_password1" name="password" placeholder="Create a password" type="password" />
+                        <input class="form-field" id="id_password2" name="passwordv" placeholder="Confirm password" type="password" />
+                    </div>
+                    <button type="submit" id="signup-btn">Sign up</button>
+                </form>
+            </div>
+            <div class='signup-footer'>Creating an account means you’re okay with BookSquare's <a href="tnc/index.html">Terms and Conditions of Service</a>.</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,115 @@
+<div id="core" class="page-search-results">
+    <!-- PAGE HEADER : begin -->
+    <div class="page-header">
+        <div class="header-shadow">
+            <div class="container">
+                <div class="page-header-inner clearfix">
+                    <h1>Search Results </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PAGE HEADER : end -->
+    <!-- MAIN WRAPPER : begin -->
+    <div class="main-wrapper-container">
+        <div class="container">
+            <div id="main-wrapper">
+                <div class="row">
+                    <div class="col-md-8 col-md-push-4">
+                        <!-- books LISTING : begin -->
+                        <div class="books-listing">
+                            <!-- books LISTING HEADER : begin -->
+                            <div class="books-listing-header clearfix">
+                                <!-- LIST SORTING : begin -->
+                                <!-- LIST SORTING : end -->
+                            </div>
+                            <!-- books LISTING HEADER : end -->
+                            <!-- book LIST : begin -->
+                            <ul class="custom-list clearfix book-list layout-list">
+                                <!-- book 1 : begin -->
+                                {foreach $b in $books}
+                                <li class="book first-in-row odd">
+                                    <div class="book-thumb">
+                                        <img src="{echo CDN}books/images/{echo $b->image}">
+                                    </div>
+                                    <div class="book-content">
+                                        <div class="book-info">
+                                            <p class="book-title">
+                                                {echo $b->name}
+                                            </p>
+                                        </div>
+                                        <div class="book-items">
+                                            <p class="book-price">
+                                                <span class="">Rs. {echo $b->price}</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="">
+                                            <button data-type="get" data-href="/cart/add/{echo $b->id}" class="request button" data-bookid="{echo $b->id}" flag="1">
+                                                <i class="fa fa-cart-plus"></i> Add to Cart</button>
+                                            <div class=""></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </li>
+                                {/foreach}
+                            </ul>
+                            <!-- book 1 : end -->
+                            <!-- book LIST : end -->
+                            <!-- books LISTING FOOTER : begin -->
+                            <div class="books-listing-footer clearfix">
+                                <div class="default-form">
+                                    <span class="select-box links">
+                                        <select name="listing-pagination">
+                                            <option value="#">Page 1</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- books LISTING FOOTER : end -->
+                        </div>
+                        <!-- books LISTING : end -->
+                    </div>
+                    <div class="col-md-4 col-md-pull-8">
+                        <!-- books SEARCH : begin -->
+                        <aside class="books-search">
+                            <h3 class="books-search-title">Search &amp; Filter</h3>
+                            <!-- books SEARCH BASIC : begin -->
+                            <div class="books-search-basic">
+                                <!-- FORM SWAP : begin -->
+                                <form class="" action="" method='get'>
+                                    <!-- SEARCH INPUT : begin -->
+                                    <p class="search-input">
+                                        <input type="text" name="title" value="{echo $title}" placeholder="Enter book name">
+                                    </p>
+                                    <!-- SEARCH INPUT : end -->
+                                    <p class="form-row">
+                                        <button type="submit" class="button submit-btn">
+                                            <i class="fa fa-search"></i>Search
+                                        </button>
+                                    </p>
+                                </form>
+                                <!-- FORM SWAP : begin -->
+                            </div>
+                            <!-- books SEARCH BASIC : end -->
+                        </aside>
+                        <!-- books SEARCH : end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MAIN WRAPPER : end -->
+</div>
+
+<script src="{echo CDN}base/js/base.js" type="text/javascript"></script>
+<script src="{echo CDN}books/js/books-listing.js" type="text/javascript"></script>
+<script>
+function init() {
+    books_listing.init();
+}
+window.addEventListener('load', init);
+</script>
+<!-- SCRIPTS : end -->

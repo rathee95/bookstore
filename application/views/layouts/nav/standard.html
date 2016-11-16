@@ -1,0 +1,84 @@
+<!-- HEADER : begin -->
+<header id="header">
+    <div class="header-toolbar">
+        <div class = "container">
+            <div class="header-toolbar-nav">
+
+                <div class = "header-cart nav-option">
+                    <button class="header-btn" onclick="location.href='/cart/show'"><i class="fa fa-shopping-cart"></i><span>&nbsp;Cart&nbsp;</span><span class='count-cart-items'>{echo $cart_count}</span></button>
+                </div>
+                {if !isset($user) || !is_object($user)}
+                    <!-- HEADER REGISTER : begin -->
+                    <div class="header-register nav-option">
+                        <button class="register-toggle header-btn" data-toggle="modal" data-target="#signup-modal"><i class="fa fa-plus-circle"></i> Register</button>
+                    </div>
+                    <!-- HEADER REGISTER : end -->
+
+                    <!-- HEADER LOGIN : begin -->
+                    <div class="header-login nav-option">
+                        <button class="login-toggle header-btn" data-toggle="modal" data-target="#login-modal"><i class="fa fa-user"></i> Login</button>
+                    </div>
+                    <!-- HEADER LOGIN : end -->
+                {/if} {else}
+                    <!-- HEADER LOGIN : begin -->
+                    <div class="header-login nav-option dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-user"></i> {echo $user->name}</button>
+                        <span class="caret"></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a href="/account">Account</a></li>
+                            <li><a href="/book/purchased">Purchased</a></li>
+                            <li><a href="/auth/logout">Logout</a></li>
+                          </ul>
+                    </div>
+                {/else}
+                
+            </div>
+        </div>   
+    </div>
+
+    <div class="container">
+        <div class="header-inner clearfix">
+            <!-- HEADER BRANDING : begin -->
+            <div class="header-branding">
+                <a href="index.html@ref=logo.html"><img src="{echo CDN}base/mainlogo.png"></a>
+            </div>
+            <!-- HEADER BRANDING : end -->
+            
+            
+                <div class="header-search"></div>
+            
+    
+            <!-- HEADER TOOLS : begin -->
+            <div class="header-tools">
+                <div class="header-register">
+                    <a class="header-btn" href="/"> Home</a>
+                </div>
+                <div class="header-register">
+                    <a class="header-btn" href="/book/all"> Books Listing</a>
+                </div>
+            </div>
+            <!-- HEADER TOOLS : end -->
+            
+            <!-- NAVBAR TOGGLE : begin -->
+            <button class="navbar-toggle button"><i class="fa fa-bars"></i></button>
+            <!-- NAVBAR TOGGLE : end -->
+        </div>
+        <div class="mobile-nav">
+            <div class="mobile-header-tools">
+                <div class="header-register">
+                    <button class="header-btn" onclick="location.href='/'"> Home</button>
+                </div>
+                <div class="header-register">
+                    <button class="header-btn" onclick="location.href='/books/'"> Books Listing</button>
+                </div>
+                <div class="header-add-offer">
+                    
+                        <a href="index.html#" class="button" data-toggle="modal" data-target="#sell-modal"><i class="fa fa-plus"></i> Sell Books</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</header>
+<!-- HEADER : end -->

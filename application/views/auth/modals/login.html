@@ -1,0 +1,22 @@
+<div id="login-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="title">Many have used BookSquare to get their books</div>
+        <div class="subtitle">Login to continue buying from us</div>
+        <br>
+        <div class="content-div">
+            <div class="form-card">
+                <form action="/auth/login" method="post" id="login-form">
+                    <input type='hidden' name='csrfmiddlewaretoken' value='IQohhX1sNb4MIBwkfQBYrnmCAVzywysm' />
+                    <div class="card-content">
+                        <input class="form-field" id="id_username" maxlength="254" name="email" placeholder="Email" type="text" />
+                        <input class="form-field" id="id_password" name="password" placeholder="Password" type="password" />
+                    </div>
+                    <button type="submit" id="login-btn" class="btn-primary btn-lg">Log in</button>
+                </form>
+                <p class='forgot-password'><a href="account/password_reset/index.html">Forgot Password?</a></p>
+                <p class='signup'>Don't have an account?
+                    <br><a>Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+</div>

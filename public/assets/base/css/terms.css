@@ -1,0 +1,24 @@
+.sample li:before {
+    color: #f1155a;
+}
+
+.sample li:before {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    font-size: 17px;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f054";
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
