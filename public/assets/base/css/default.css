@@ -12,7 +12,7 @@ a:hover { border-color: #f1155a; }
 		TYPOGRAPHY
 	------------------------------------------------------------------------- */
 
-	h1, h2, h3, h4, h5, h6 { color: #423338; }
+	h1, h2, h3, h4, h5, h6 { color: #123321; }
 	table th { color: #FFF; background-color: #f1155a; }
 	table td { border-color: #e6e6e6; }
 	ul > li:before { color: #f1155a; }
@@ -441,7 +441,7 @@ a:hover { border-color: #f1155a; }
 	.books-listing-footer { border-color: #f3f3f3; }
 
 	/* books SEARCH */
-	.books-search-title { color: #FFF; background-color: #f1155a; }
+	.books-search-title { color: #fff; background-color: #F11786; }
 	.books-search .form-divider { border-color: #f3f3f3; }
 
 	/* books FILTER */
